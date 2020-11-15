@@ -19,9 +19,16 @@ const Facebook = () => {
 
     return (
         <div>
-            <button className="btn rounded border border-dark d-flex pr-5"onClick={handleFacebookAuth}>
-                <div><SiFacebook /></div>
-               <div className="ml-auto pl-5">Continue with Google</div>
+            <button
+                className='btn rounded-pill border border-dark d-flex pr-5 font-weight-bold'
+                onClick={handleFacebookAuth}
+            >
+                <div>
+                    <SiFacebook style={{ fontSize: '2rem' }} />
+                </div>
+                <div className='ml-auto pl-5' style={{ fontSize: '1.2rem' }}>
+                    Continue with Google
+                </div>
             </button>
         </div>
     );
