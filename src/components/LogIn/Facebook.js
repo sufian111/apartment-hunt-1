@@ -19,9 +19,9 @@ const Facebook = () => {
 
     return (
         <div>
-            <button onClick={handleFacebookAuth}>
-                <SiFacebook style={{ color: '#3b5998' }} /> Continue with
-                Facebook
+            <button className="btn rounded border border-dark d-flex pr-5"onClick={handleFacebookAuth}>
+                <div><SiFacebook /></div>
+               <div className="ml-auto pl-5">Continue with Google</div>
             </button>
         </div>
     );

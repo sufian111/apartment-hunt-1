@@ -23,10 +23,9 @@ const Google = () => {
 
     return (
         <div>
-            <button onClick={handleGoogleSignIn}>
-                {' '}
-                <FcGoogle />
-                Continue with Google
+            <button className="btn rounded border border-dark d-flex pr-5"onClick={handleGoogleSignIn}>
+                <div><FcGoogle /></div>
+               <div className="ml-auto pl-5">Continue with Google</div>
             </button>
         </div>
     );
