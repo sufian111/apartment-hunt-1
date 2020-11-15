@@ -24,7 +24,9 @@ const Facebook = () => {
                 onClick={handleFacebookAuth}
             >
                 <div>
-                    <SiFacebook style={{ fontSize: '2rem' }} />
+                    <SiFacebook
+                        style={{ fontSize: '2rem', color: '#4267B2' }}
+                    />
                 </div>
                 <div className='ml-auto pl-5' style={{ fontSize: '1.2rem' }}>
                     Continue with Google
