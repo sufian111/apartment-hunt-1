@@ -4,14 +4,15 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import Home from "./components/Home/Home/Home";
 
 function App() {
   return (
     <Router>
       <Switch>
-        <Home>
-
-        </Home>
+        <Route path="/">
+          <Home />
+        </Route>
       </Switch>
     </Router>
   );
