@@ -10,14 +10,21 @@ import BookingList from "./components/Home/Dashboard/BookingList/BookingList";
 import MyRent from "./components/Home/Dashboard/MyRent/MyRent";
 import Home from "./components/Home/Home/Home";
 import Login from "./components/Home/Login/Login";
+import PrivateRoute from "./components/Home/PrivateRoute/PrivateRoute";
 
 export const UserContext = createContext();
 
 const App = () => {
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState({
+    name: '',
+    email: '',
+    photo: '',
+    message: ''
+  });
+
 
   return (
-    <UserContext.Provider value={[user, setUser]}>
+    <UserContext.Provider value={{ userData: [user, setUser] }}>
       <Router>
         <Switch>
 
@@ -25,16 +32,16 @@ const App = () => {
             <Home />
           </Route>
 
-          <Route path="/login">
-            <Login />
-          </Route>
-
           <Route path="/services">
             <ApartmentDetail />
           </Route>
 
-          <Route path="/dashboard">
+          <PrivateRoute exact path="/dashboard">
             <BookingList />
+          </PrivateRoute>
+
+          <Route path="/login">
+            <Login />
           </Route>
 
           <Route path="/bookingList">

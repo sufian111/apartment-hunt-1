@@ -11,8 +11,9 @@ import google from '../../../images/logos/Group 573.png';
 import Topbar from '../../Shared/Topbar/Topbar';
 
 const Login = () => {
-    const [user, setUser] = useContext(UserContext);
+    const { userData } = useContext(UserContext);
     const [newUser, setNewUser] = useState(false);
+    const [user, setUser] = userData;
 
     const history = useHistory();
     const location = useLocation();
