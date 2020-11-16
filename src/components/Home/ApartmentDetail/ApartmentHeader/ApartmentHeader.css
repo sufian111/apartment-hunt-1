@@ -1,0 +1,16 @@
+.DetailBanner{
+    height: 50vh;
+    width: 100%;
+}
+.DetailBanner2{
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://i.ibb.co/LpCxsgx/Rectangle-13.png');
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-size: cover;
+    flex-direction: column;
+}

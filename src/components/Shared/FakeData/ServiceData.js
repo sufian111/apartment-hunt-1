@@ -13,8 +13,7 @@ const serviceData = [
         img: 'https://i.ibb.co/x67pGTd/lessee-1.png',
         serviceName: 'Trusted by Thousands',
         serviceDetail: '10 new offers every day. 350 offers on site, trusted by a community of thousands of users.'
-    },
-
+    }
 ]
 
 export default serviceData;
