@@ -1,10 +1,16 @@
-import React, { useState } from 'react';
-import FakeData from '../../../Shared/FakeData/HotelData';
+import React, { useEffect, useState } from 'react';
 import Hotels from '../Hotels/Hotels';
 import './Body.css';
 
 const Body = () => {
-    const [hotels, setHotels] = useState(FakeData);
+    const [hotels, setHotels] = useState([]);
+    // Data Loaded
+    useEffect(() => {
+        fetch('http://localhost:4000/bookings')
+            .then(res => res.json())
+            .then(data => setHotels(data))
+    }, [hotels]);
+
     return (
         <div className="container mt-4">
             <div className="text-center mb-3">
