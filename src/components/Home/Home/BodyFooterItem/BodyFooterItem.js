@@ -9,7 +9,7 @@ const BodyFooterItem = ({ service }) => {
                     <div className="d-flex justify-content-center pt-3">
                         <img height="90px" width="90px" src={img} alt="..." />
                     </div>
-                    <div class="card-body">
+                    <div className="card-body">
                         <h5 className="font-weight-bold" style={{ color: "#16322E" }}>{serviceName}</h5>
                         <p className="text-muted">
                             {serviceDetail}
