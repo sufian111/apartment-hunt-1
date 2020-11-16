@@ -11,9 +11,11 @@ const Sidebar = () => {
     return (
         <div className="sidebar d-flex flex-column justify-content-between" style={{ height: "100vh" }}>
             <ul className="list-unstyled">
-                <div className="pb-5">
-                    <img height="50px" width="100px" src={logo} alt="" />
-                </div>
+                <Link to="/home">
+                    <div className="pb-5">
+                        <img height="50px" width="100px" src={logo} alt="" />
+                    </div>
+                </Link>
                 <li>
                     <Link to="/bookingList">
                         <img height="20px" src={server} alt="" />  <span>Booking list</span>

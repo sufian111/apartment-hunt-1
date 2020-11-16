@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Header.css';
+import FakeData from '../../../Shared/FakeData/HotelData';
 
 const Header = () => {
     return (
