@@ -22,7 +22,7 @@ const Topbar = () => {
                             <Link className="nav-link" to="/about">About</Link>
                         </li>
                         <li className="nav-item mr-4">
-                            <Link className="nav-link" to="/services">Services</Link>
+                            <Link className="nav-link" to="/service">Services</Link>
                         </li>
                         <li className="nav-item mr-4">
                             <Link className="nav-link" to="/dashboard">Concerns</Link>
