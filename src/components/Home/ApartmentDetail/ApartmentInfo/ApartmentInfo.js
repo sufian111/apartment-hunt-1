@@ -1,23 +1,47 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import apartment from "../../../../images/images/Rectangle 396.png";
 import apartment2 from "../../../../images/images/Rectangle 398.png";
 import apartment3 from "../../../../images/images/Rectangle 403.png";
 import apartment4 from "../../../../images/images/Rectangle 404.png";
 import apartment5 from "../../../../images/images/Rectangle 405.png";
 import { useForm } from "react-hook-form";
+import { useParams } from "react-router-dom";
 
 const ApartmentInfo = () => {
-  const { register, handleSubmit, watch, errors } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const [hotel, setHotel] = useState([]);
+  const { id } = useParams();
 
-  console.log(watch("example"));
+  useEffect(() => {
+    loadData()
+  }, [id])
+
+  const loadData = async () => {
+    await fetch('http://localhost:4000/bookings/' + id)
+      .then(res => res.json())
+      .then(data => setHotel(data))
+  }
+  const { img } = hotel;
+
+
+  const { register, handleSubmit, errors } = useForm();
+  const onSubmit = (data) => {
+    fetch("http://localhost:4000/rents", {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      });
+  }
 
   return (
     <div className="container mt-5">
       <div className="row">
         <div className="col-md-8 col-sm-12">
           <div className="w-100">
-            <img height="350px" width="730px" src={apartment} alt="" />
+            <img height="350px" width="730px" src={img} alt="" />
           </div>
           <div className="d-flex justify-content-between w-100 mt-4">
             <img height="110px" width="170px" src={apartment2} alt="" />
@@ -32,9 +56,10 @@ const ApartmentInfo = () => {
             style={{ backgroundColor: "#F4F4F4" }}
             onSubmit={handleSubmit(onSubmit)}
           >
+
             <input
               className="form-control"
-              name="exampleRequired"
+              name="userName"
               placeholder="Full Name"
               required
               ref={register({ required: true })}
@@ -43,7 +68,7 @@ const ApartmentInfo = () => {
 
             <input
               className="form-control"
-              name="exampleRequired"
+              name="phone"
               placeholder="Phone No."
               required
               ref={register({ required: true })}
@@ -52,7 +77,7 @@ const ApartmentInfo = () => {
 
             <input
               className="form-control"
-              name="exampleRequired"
+              name="email"
               placeholder="Email Address"
               required
               ref={register({ required: true })}
@@ -61,8 +86,8 @@ const ApartmentInfo = () => {
 
             <textarea
               className="form-control"
-              name="exampleRequired"
-              placeholder="Massage"
+              name="message"
+              placeholder="Message..."
               cols="30"
               rows="7"
               Massage
