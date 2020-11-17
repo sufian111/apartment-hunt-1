@@ -90,7 +90,7 @@ const ApartmentInfo = () => {
               placeholder="Message..."
               cols="30"
               rows="7"
-              Massage
+              massage="true"
               required
               ref={register({ required: true })}
             />
