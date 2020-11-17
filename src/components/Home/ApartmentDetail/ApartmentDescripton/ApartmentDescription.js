@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import "./ApartmentDescription.scss";
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import './ApartmentDescription.scss';
 
 const ApartmentDescription = () => {
     const [hotel, setHotel] = useState([]);
     const { id } = useParams();
 
     useEffect(() => {
-        loadData()
-    }, [id])
+        loadData();
+    }, [id]);
 
     const loadData = async () => {
         await fetch('https://hunt-apartment.herokuapp.com/bookings/' + id)
