@@ -12,59 +12,62 @@ import NotFound from './components/NotFound/NotFound';
 export const UserContext = createContext();
 
 const App = () => {
-    const [user, setUser] = useState({
-        name: '',
-        email: '',
-        photo: '',
-    });
+  const [user, setUser] = useState({
+    name: '',
+    email: '',
+    photo: '',
+  });
 
-    return (
-        <UserContext.Provider value={{ userData: [user, setUser] }}>
-            <Router>
-                <Switch>
-                    <Route path='/home'>
-                        <Home />
-                    </Route>
 
-                    <Route path='/service'>
-                        <ApartmentDetail />
-                    </Route>
+  return (
+    <UserContext.Provider value={{ userData: [user, setUser] }}>
+      <Router>
+        <Switch>
 
-                    <Route path='/services/:id'>
-                        <ApartmentDetail />
-                    </Route>
+          <Route path="/home">
+            <Home />
+          </Route>
 
-                    <PrivateRoute exact path='/dashboard'>
-                        <BookingList />
-                    </PrivateRoute>
+          <Route path="/service">
+            <ApartmentDetail />
+          </Route>
 
-                    <Route path='/login'>
-                        <Login />
-                    </Route>
+          <Route path="/services/:id">
+            <ApartmentDetail />
+          </Route>
 
-                    <Route path='/bookingList'>
-                        <BookingList />
-                    </Route>
+          <PrivateRoute exact path="/dashboard">
+            <BookingList />
+          </PrivateRoute>
 
-                    <Route path='/addHouse'>
-                        <AddHouse />
-                    </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
 
-                    <Route path='/myRent'>
-                        <MyRent />
-                    </Route>
+          <PrivateRoute path="/bookingList">
+            <BookingList />
+          </PrivateRoute>
 
-                    <Route exact path='/'>
-                        <Home />
-                    </Route>
+          <PrivateRoute path="/addHouse">
+            <AddHouse />
+          </PrivateRoute>
 
-                    <Route path='*'>
-                        <NotFound />
-                    </Route>
-                </Switch>
-            </Router>
-        </UserContext.Provider>
-    );
+          <PrivateRoute path="/myRent">
+            <MyRent />
+          </PrivateRoute>
+
+          <Route exact path="/">
+            <Home />
+          </Route>
+
+          <Route path="*">
+            <NotFound />
+          </Route>
+
+        </Switch>
+      </Router>
+    </UserContext.Provider>
+  );
 };
 
 export default App;
