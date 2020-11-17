@@ -41,7 +41,7 @@ const ApartmentInfo = () => {
       <div className="row">
         <div className="col-md-8 col-sm-12">
           <div className="w-100">
-            <img height="350px" width="730px" src={img} alt="" />
+            <img height="350px" width="730px" src={img || "https://www.businessobserverfl.com/sites/default/files/201679_standard.jpeg"} alt="" />
           </div>
           <div className="d-flex justify-content-between w-100 mt-4">
             <img height="110px" width="170px" src={apartment2} alt="" />
