@@ -13,11 +13,10 @@ const ApartmentDescription = () => {
     const loadData = async () => {
         await fetch('http://localhost:4000/bookings/' + id)
             .then(res => res.json())
-            .then(data => console.log(data.name))
+            .then(data => setHotel(data))
     }
 
-    // const findService = hotel.filter(hotel => hotel._id == id);
-    // console.log(findService);
+    const { name, price } = hotel;
 
     return (
         <div className="container">
@@ -26,10 +25,10 @@ const ApartmentDescription = () => {
                     <div className="mt-4">
                         <div className="d-flex font-weight-bold justify-content-between">
                             <h1 className="font-weight-bold" style={{ color: "#16322E" }}>
-                                Name
+                                {name}
                             </h1>
                             <h1 className="font-weight-bold" style={{ color: "#16322E" }}>
-                                $254
+                                ${price}
                             </h1>
                         </div>
                         <p>

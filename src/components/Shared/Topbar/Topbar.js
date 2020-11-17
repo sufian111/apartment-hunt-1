@@ -34,9 +34,9 @@ const Topbar = () => {
               </Link>
             </li>
             <li className="nav-item mr-4">
-              <Link className="nav-link" to="/service">
+              <a className="nav-link" href="#service">
                 Services
-              </Link>
+              </a>
             </li>
             <li className="nav-item mr-4">
               <Link className="nav-link" to="/dashboard">
@@ -54,7 +54,7 @@ const Topbar = () => {
               </Link>
             </li>
             <li className="nav-item mr-4">
-              <Link to="/login">
+              <Link to="/dashboard">
                 <button className="btn button">Login</button>
               </Link>
             </li>
