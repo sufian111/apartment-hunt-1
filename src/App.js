@@ -48,17 +48,17 @@ const App = () => {
             <Login />
           </Route>
 
-          <Route path="/bookingList">
+          <PrivateRoute path="/bookingList">
             <BookingList />
-          </Route>
+          </PrivateRoute>
 
-          <Route path="/addHouse">
+          <PrivateRoute path="/addHouse">
             <AddHouse />
-          </Route>
+          </PrivateRoute>
 
-          <Route path="/myRent">
+          <PrivateRoute path="/myRent">
             <MyRent />
-          </Route>
+          </PrivateRoute>
 
           <Route exact path="/">
             <Home />

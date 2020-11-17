@@ -70,7 +70,7 @@ const InputedItem = () => {
                         <label htmlFor="">Thumbnail</label> <br />
                         <label required style={{ backgroundColor: "#DEFFED", color: "#009444", border: "1px solid #009444", cursor: "pointer" }} className="custom-file-upload w-50 p-2 text-center">
                             <input name="file" required style={{ display: "none" }} ref={register({ required: true })} type="file" />
-                            <img height="20px" src={upload} alt="" /> upload project file
+                            <img height="20px" src={upload} alt="" /> Upload Image
                              </label>
                     </div>
                 </div>

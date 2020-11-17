@@ -2,29 +2,21 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 const ApartmentDescription = () => {
-    // const [hotel, setHotel] = useState([]);
-    // const { id } = useParams();
-    // const [eventId, setEventId] = useState()
+    const [hotel, setHotel] = useState([]);
+    const { id } = useParams();
 
-    // console.log(eventId);
+    useEffect(() => {
+        loadData()
+    }, [id])
 
-    // useEffect(() => {
-    //     loadData()
-    // }, [id])
+    const loadData = async () => {
+        await fetch('http://localhost:4000/bookings/' + id)
+            .then(res => res.json())
+            .then(data => console.log(data.name))
+    }
 
-    // const loadData = async () => {
-    //     await fetch('https://hunt-apartment.herokuapp.com/bookings/' + id)
-    //         .then(res => res.json())
-    //         .then(data => setEventId(data))
-    // }
-
-    // const findService = eventId.filter(hotel => hotel._id == id);
-
-    // const { bath, img, location, name, price, priceDetail, propertyDetail, shortDetail } = eventId ? eventId[0] : []
-
+    // const findService = hotel.filter(hotel => hotel._id == id);
     // console.log(findService);
-    // // const [] = findService;
-    // console.log(findService.name);
 
     return (
         <div className="container">
