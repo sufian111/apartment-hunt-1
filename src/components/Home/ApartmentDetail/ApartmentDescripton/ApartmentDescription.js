@@ -11,7 +11,7 @@ const ApartmentDescription = () => {
     }, [id]);
 
     const loadData = async () => {
-        await fetch('http://localhost:4000/bookings/' + id)
+        await fetch('https://hunt-apartment.herokuapp.com/bookings/' + id)
             .then((res) => res.json())
             .then((data) => setHotel(data));
     };

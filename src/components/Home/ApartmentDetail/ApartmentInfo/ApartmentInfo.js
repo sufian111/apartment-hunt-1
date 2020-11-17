@@ -16,7 +16,7 @@ const ApartmentInfo = () => {
   }, [id])
 
   const loadData = async () => {
-    await fetch('http://localhost:4000/bookings/' + id)
+    await fetch('https://hunt-apartment.herokuapp.com/bookings/' + id)
       .then(res => res.json())
       .then(data => setHotel(data))
   }
@@ -25,7 +25,7 @@ const ApartmentInfo = () => {
 
   const { register, handleSubmit, errors } = useForm();
   const onSubmit = (data) => {
-    fetch("http://localhost:4000/rents", {
+    fetch("https://hunt-apartment.herokuapp.com/rents", {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
