@@ -6,7 +6,7 @@ const Body = () => {
     const [hotels, setHotels] = useState([]);
     // Data Loaded
     useEffect(() => {
-        fetch('http://localhost:4000/bookings')
+        fetch('https://hunt-apartment.herokuapp.com/bookings')
             .then(res => res.json())
             .then(data => setHotels(data))
     }, [hotels]);

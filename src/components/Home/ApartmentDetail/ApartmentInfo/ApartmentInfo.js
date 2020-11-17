@@ -28,18 +28,18 @@ const ApartmentInfo = () => {
                 </div>
                 <div className="col-md-4 col-sm-12">
                     <form className="p-4" style={{ backgroundColor: "#F4F4F4" }} onSubmit={handleSubmit(onSubmit)}>
-                        <input className="form-control" name="exampleRequired" placeholder="Full Name" ref={register({ required: true })} />
-                        {errors.exampleRequired && <span>This field is required</span>}
+                        <input className="form-control" name="exampleRequired" placeholder="Full Name" required ref={register({ required: true })} />
                         <br />
-                        <input className="form-control" name="exampleRequired" placeholder="Phone No." ref={register({ required: true })} />
-                        {errors.exampleRequired && <span>This field is required</span>}
+
+                        <input className="form-control" name="exampleRequired" placeholder="Phone No." required ref={register({ required: true })} />
                         <br />
-                        <input className="form-control" name="exampleRequired" placeholder="Email Address" ref={register({ required: true })} />
-                        {errors.exampleRequired && <span>This field is required</span>}
+
+                        <input className="form-control" name="exampleRequired" placeholder="Email Address" required ref={register({ required: true })} />
                         <br />
-                        <textarea className="form-control" name="exampleRequired" placeholder="Massage" cols="30" rows="7" Massage ref={register({ required: true })} />
-                        {errors.exampleRequired && <span>This field is required</span>}
+
+                        <textarea className="form-control" name="exampleRequired" placeholder="Massage" cols="30" rows="7" Massage required ref={register({ required: true })} />
                         <br />
+
                         <input className="btn button w-100" type="submit" />
                     </form>
                 </div>

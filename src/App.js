@@ -7,6 +7,7 @@ import MyRent from './components/Home/Dashboard/MyRent/MyRent';
 import Home from './components/Home/Home/Home';
 import Login from './components/Home/Login/Login';
 import PrivateRoute from './components/Home/PrivateRoute/PrivateRoute';
+import NotFound from './components/NotFound/NotFound';
 
 export const UserContext = createContext();
 
@@ -15,7 +16,6 @@ const App = () => {
         name: '',
         email: '',
         photo: '',
-        message: '',
     });
 
     return (
@@ -26,7 +26,11 @@ const App = () => {
                         <Home />
                     </Route>
 
-                    <Route path='/services'>
+                    <Route path='/service'>
+                        <ApartmentDetail />
+                    </Route>
+
+                    <Route path='/services/:id'>
                         <ApartmentDetail />
                     </Route>
 
@@ -50,8 +54,12 @@ const App = () => {
                         <MyRent />
                     </Route>
 
-                    <Route path='/'>
+                    <Route exact path='/'>
                         <Home />
+                    </Route>
+
+                    <Route path='*'>
+                        <NotFound />
                     </Route>
                 </Switch>
             </Router>

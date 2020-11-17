@@ -1,6 +1,6 @@
 import React from 'react';
 import Topbar from '../../Shared/Topbar/Topbar';
-import ApartmentDescripton from './ApartmentDescripton/ApartmentDescripton';
+import ApartmentDescripton from './ApartmentDescripton/ApartmentDescription';
 import ApartmentHeader from './ApartmentHeader/ApartmentHeader';
 import ApartmentInfo from './ApartmentInfo/ApartmentInfo';
 
