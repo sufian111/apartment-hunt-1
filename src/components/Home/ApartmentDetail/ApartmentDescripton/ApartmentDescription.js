@@ -35,18 +35,18 @@ const ApartmentDescription = () => {
                             <h1 style={{ color: "#16322E!important" }}>Name</h1>
                             <h1 style={{ color: "#16322E!important" }}>$254</h1>
                         </div>
-                        <p>okay</p>
+                        <p>kaj kora lagbe</p>
                     </div>
                     <div className="mt-5">
                         <h3 className="font-weight-bold" style={{ color: "#16322E!important" }}>Price Details-</h3>
                         <p>
-                            okay
+                            kaj kora lagbe
                         </p>
                     </div>
                     <div className="mt-5 mb-5">
                         <h3 className="font-weight-bold" style={{ color: "#16322E!important" }}>Property Details-</h3>
                         <p>
-                            okay
+                            kaj kora lagbe
                         </p>
                     </div>
                 </div>
